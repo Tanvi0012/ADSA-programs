@@ -1,0 +1,21 @@
+/*Sum of Elements in an Array
+• Scenario: You have a list of daily sales of a store.
+a) Write a simple iterative program to compute the sum of elements.*/
+#include<stdio.h>
+int main() 
+{
+    int n,i,sum=0;
+    printf("enter no. of days");
+    scanf("%d",&n);
+    int sales[n];
+    printf("Enter daily sales:\n");
+    for(i = 0; i < n; i++) {
+        scanf("%d", &sales[i]);
+    }
+// Iterative sum
+    for(i = 0; i < n; i++) {
+        sum += sales[i];
+    }
+    printf("Total sales = %d\n", sum);
+    return 0;
+}

@@ -1,0 +1,20 @@
+// Recursive function to find sum of array
+#include <stdio.h>
+int sumArray(int arr[], int n) {
+    if(n <= 0)  // Base case
+        return 0;
+    return arr[n - 1] + sumArray(arr, n - 1);
+}
+int main() {
+    int n, i;
+    printf("Enter no. of days");
+    scanf("%d", &n);
+    int sales[n];
+    printf("Enter daily sales:\n");
+    for(i = 0; i < n; i++) {
+        scanf("%d", &sales[i]);
+    }
+    int total = sumArray(sales, n);
+    printf("Total sales = %d\n", total);
+    return 0;
+}

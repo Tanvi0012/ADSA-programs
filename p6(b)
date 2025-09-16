@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+    int n, i, key;
+    printf("Enter number of customers: ");
+    scanf("%d", &n);
+    int arr[n+1];
+    printf("Enter customer IDs:\n");
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("Enter customer ID to search: ");
+    scanf("%d", &key);
+    arr[n] = key;
+    i = 0;
+    while(arr[i] != key) {
+        i++;
+    }
+    if(i < n)
+        printf("Customer ID %d found at position %d\n", key, i+1);
+    else
+        printf("Customer ID %d not found\n", key);
+    return 0;
+}
