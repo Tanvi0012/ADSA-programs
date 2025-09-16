@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+    char str[100];
+    int i, count = 0;
+    int vowels[256] = {0};
+    vowels['a'] = 1;
+    vowels['e'] = 1;
+    vowels['i'] = 1;
+    vowels['o'] = 1;
+    vowels['u'] = 1;
+    vowels['A'] = 1;
+    vowels['E'] = 1;
+    vowels['I'] = 1;
+    vowels['O'] = 1;
+    vowels['U'] = 1;
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    for(i = 0; str[i] != '\0'; i++) {
+        if(vowels[(unsigned char)str[i]]) {
+            count++;
+        }
+    }
+    printf("Number of vowels = %d\n", count);
+    return 0;
+}
